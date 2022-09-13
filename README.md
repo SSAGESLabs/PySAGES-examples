@@ -45,3 +45,7 @@ where `backend?? = ['ase', 'hoomd-blue', 'openmm']`;
 `method?? = ['abf', 'cff', etc.]`.
 
 
+Moreover, the folder [inputs/](./inputs/) contains some auxiliary files
+such as starting coordinates.
+
+
