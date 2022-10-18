@@ -13,27 +13,37 @@ PySAGES-examples
 │   │
 │   └───classic
 │   │   │
-│   │   └───system01_method01
-│   │   │   │   system01_method01.ipynb
-│   │   │   │   system01_method01.md
-│   │   │   │   system01_method01.py
+│   │   └───system01
+│   │   │   │
+│   │   │   └───method01
+│   │   │   │   │   system01_method01.ipynb
+│   │   │   │   │   system01_method01.md
+│   │   │   │   │   system01_method01.py
+│   │   │   │
+│   │   │   └───method02
+│   │   │   │   │   system01_method02.ipynb
+│   │   │   │   │   system01_method02.md
+│   │   │   │   │   system01_method02.py
+│   │   │   │
+│   │   │   └───method03
+│   │   │       │   ...
 │   │   │
-│   │   └───system01_method02
-│   │   │   │   system01_method02.ipynb
-│   │   │   │   system01_method02.md
-│   │   │   │   system01_method02.py
-│   │   │
-│   │   └───system02_method01
+│   │   └───system02
 │   │       │   ...
 │   │
 │   └───research
 │       │
-│       └───system01_method01
-│       │   │   system01_method01.ipynb
-│       │   │   system01_method01.md
-│       │   │   system01_method01.py
+│       └───system01
+│       │   │
+│       │   └───method01
+│       │   │   │   system01_method01.ipynb
+│       │   │   │   system01_method01.md
+│       │   │   │   system01_method01.py
+│       │   │
+│       │   └───method02
+│       │       │   ...
 │       │  
-│       └───system02_method01
+│       └───system02
 │           │   ...
 │   
 └───backend02
@@ -53,12 +63,12 @@ such as starting coordinates.
 
 | system     | method       | CV                 | script                                             | notebook |
 |------------|--------------|--------------------|----------------------------------------------------|----------| 
-| butane     | ANN          | dihedral angle     | [script.py](./hoomd-blue/classic/butane_ann/butane_ANN.py) | [![butane_ANN](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/hoomd-blue/classic/butane_ann/butane_ANN.ipynb) |
-| butane     | FUNN         | dihedral angle     | [script.py](./hoomd-blue/classic/butane_funn/butane_FUNN.py) | [![butane_FUNN](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/hoomd-blue/classic/butane_funn/butane_FUNN.ipynb) |
-| butane     | CFF          | dihedral angle     | [script.py](./hoomd-blue/classic/butane_cff/butane_CFF.py) | [![butane_CFF](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/hoomd-blue/classic/butane_cff/butane_CFF.ipynb) |
-| butane     | SpectralABF  | dihedral angle     | [script.py](./hoomd-blue/classic/butane_spectral_abf/butane_SpectralABF.py) | [![butane_SpectralABF](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/hoomd-blue/classic/butane_spectral_abf/butane_SpectralABF.ipynb) |
-| alanine dp | Metadynamics | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide_metad/adp_Metadynamics.py) | [![adp_Metadynamics](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/openmm/classic/alaninedipeptide_metad/adp_Metadynamics.ipynb) |
-| alanine dp | SpectralABF  | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide_metad/adp_SpectralABF.py) | [![adp_SpectralABF](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/openmm/classic/alaninedipeptide_metad/adp_SpectralABF.ipynb) |
+| butane     | ANN          | dihedral angle     | [script.py](./hoomd-blue/classic/butane/ann/butane_ANN.py) | [![butane_ANN](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/hoomd-blue/classic/butane/ann/butane_ANN.ipynb) |
+| butane     | FUNN         | dihedral angle     | [script.py](./hoomd-blue/classic/butane/funn/butane_FUNN.py) | [![butane_FUNN](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/hoomd-blue/classic/butane/funn/butane_FUNN.ipynb) |
+| butane     | CFF          | dihedral angle     | [script.py](./hoomd-blue/classic/butane/cff/butane_CFF.py) | [![butane_CFF](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/hoomd-blue/classic/butane/cff/butane_CFF.ipynb) |
+| butane     | SpectralABF  | dihedral angle     | [script.py](./hoomd-blue/classic/butane/spectral_abf/butane_SpectralABF.py) | [![butane_SpectralABF](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/hoomd-blue/classic/butane/spectral_abf/butane_SpectralABF.ipynb) |
+| alanine dp | Metadynamics | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/metad/adp_Metadynamics.py) | [![adp_Metadynamics](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/openmm/classic/alaninedipeptide/metad/adp_Metadynamics.ipynb) |
+| alanine dp | SpectralABF  | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/spectral_abf/adp_SpectralABF.py) | [![adp_SpectralABF](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/openmm/classic/alaninedipeptide/spectral_abf/adp_SpectralABF.ipynb) |
 
 *ANN*  = Artificial Neural Network sampling
 
