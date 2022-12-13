@@ -71,6 +71,7 @@ such as starting coordinates.
 | alanine dp | ABF          | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/abf/adp_ABF.py) | --- |
 | alanine dp | Metadynamics | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/metad/adp_Metadynamics.py) | [![adp_Metadynamics](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/openmm/classic/alaninedipeptide/metad/adp_Metadynamics.ipynb) |
 | alanine dp | SpectralABF  | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/spectral_abf/adp_SpectralABF.py) | [![adp_SpectralABF](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/openmm/classic/alaninedipeptide/spectral_abf/adp_SpectralABF.ipynb) |
+| alanine dp | ANN          | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/ann/adp_ANN.py) | --- |
 | alanine dp | unbiased     | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/unbiased/adp_unbiased.py) | --- |
 
 *ANN*  = Artificial Neural Network sampling [[JCP **2018**, 148, 104111]](https://doi.org/10.1063/1.5018708)
