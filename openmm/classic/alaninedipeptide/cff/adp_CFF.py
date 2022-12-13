@@ -95,9 +95,8 @@ def main(argv=[]):
     # Method
     method = CFF(cvs, grid, topology, kT, train_freq=args.train_freq)
 
-    timesteps = args.time_steps
     tic = time.perf_counter()
-    raw_result = pysages.run(method, generate_simulation, timesteps)
+    raw_result = pysages.run(method, generate_simulation, timesteps = args.time_steps)
     toc = time.perf_counter()
     print(f"Completed the simulation in {toc - tic:0.4f} seconds.")
 
