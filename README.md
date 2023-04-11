@@ -1,7 +1,10 @@
 
 # PySAGES-examples
 
-Repository containing an extensive set of examples for enhanced sampling simulations using [PySAGES](https://arxiv.org/abs/2301.04835). The repo containing the `PySAGES` code can be found [here](https://github.com/SSAGESLabs/PySAGES).
+Repository containing an extensive set of examples for enhanced sampling simulations using [PySAGES](https://arxiv.org/abs/2301.04835). The repo containing the PySAGES code can be found [here](https://github.com/SSAGESLabs/PySAGES).
+
+
+## Repo organization
 
 Examples are divided in two main categories: `classic examples` and `research examples`.
 
@@ -79,12 +82,9 @@ such as starting coordinates.
 | NaCl       | Metadynamics | distance           | [script.py](./openmm/classic/NaCl/metad/nacl_Metadynamics.py) | [![nacl_Metadynamics](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/openmm/classic/NaCl/metad/nacl_Metadynamics.ipynb) |
 
 *ANN*  = Artificial Neural Network sampling 
-
 *FUNN* = adpative Force-biasing sampling Using Neural Networks, or FUNN-ABF 
-
 *CFF*  = Combined Force-Frequency sampling 
-
 *SpectralABF* = Spectral Adaptive Biasing Force 
 
-See [the PySAGES manuscript](https://arxiv.org/abs/2301.04835) for references to the methods. 
+See [the PySAGES manuscript](https://arxiv.org/abs/2301.04835) for more info on the methods and their citations.
 
