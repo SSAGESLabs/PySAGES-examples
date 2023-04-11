@@ -74,13 +74,4 @@ such as starting coordinates.
 | alanine dp | SpectralABF  | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/spectral_abf/adp_SpectralABF.py) | [![adp_SpectralABF](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/openmm/classic/alaninedipeptide/spectral_abf/adp_SpectralABF.ipynb) |
 | alanine dp | ANN          | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/ann/adp_ANN.py) | --- |
 | alanine dp | unbiased     | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/unbiased/adp_unbiased.py) | --- |
-| NaCl       | Metadynamics | distance           | [script.py](./openmm/classic/NaCl/metad/nacl_Metadynamics.py) | [![nacl_Metadynamics](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/openmm/classic/NaCl/metad/nacl_Metadynamics.ipynb) |
-
-*ANN*  = Artificial Neural Network sampling [[JCP **2018**, 148, 104111]](https://doi.org/10.1063/1.5018708)
-
-*FUNN* = adpative Force-biasing sampling Using Neural Networks, or FUNN-ABF [[JCP **2018**, 148, 134108]](https://doi.org/10.1063/1.5020733)
-
-*CFF*  = Combined Force-Frequency sampling [[JCTC **2020**, 16, 1448−1455]](https://doi.org/10.1021/acs.jctc.9b00883)
-
-*SpectralABF* = Spectral Adaptive Biasing Force [[arXiv:2202.01876, **2022**]](https://arxiv.org/abs/2202.01876) 
 
