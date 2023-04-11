@@ -1,6 +1,8 @@
 
 # PySAGES-examples
 
+Repository containing an extensive set of examples for enhanced sampling simulations using [PySAGES](https://arxiv.org/abs/2301.04835). The repo containing the `PySAGES` code can be found [here](https://github.com/SSAGESLabs/PySAGES).
+
 Examples are divided in two main categories: `classic examples` and `research examples`.
 
 The repo is organized as follows:
@@ -74,4 +76,15 @@ such as starting coordinates.
 | alanine dp | SpectralABF  | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/spectral_abf/adp_SpectralABF.py) | [![adp_SpectralABF](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/openmm/classic/alaninedipeptide/spectral_abf/adp_SpectralABF.ipynb) |
 | alanine dp | ANN          | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/ann/adp_ANN.py) | --- |
 | alanine dp | unbiased     | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/unbiased/adp_unbiased.py) | --- |
+| NaCl       | Metadynamics | distance           | [script.py](./openmm/classic/NaCl/metad/nacl_Metadynamics.py) | [![nacl_Metadynamics](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SSAGESLabs/PySAGES-examples/blob/main/openmm/classic/NaCl/metad/nacl_Metadynamics.ipynb) |
+
+*ANN*  = Artificial Neural Network sampling 
+
+*FUNN* = adpative Force-biasing sampling Using Neural Networks, or FUNN-ABF 
+
+*CFF*  = Combined Force-Frequency sampling 
+
+*SpectralABF* = Spectral Adaptive Biasing Force 
+
+See [the PySAGES manuscript](https://arxiv.org/abs/2301.04835) for references to the methods. 
 
