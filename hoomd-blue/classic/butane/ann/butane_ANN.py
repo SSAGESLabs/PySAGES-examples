@@ -295,9 +295,8 @@ def main(argv=[]):
     plt.gca()
     fig.savefig("butane-fe.png")
 
-    # write free energy to file
-    dih_vs_A = np.stack([mesh[:, 0], A[:, 0]], axis=1)
-    np.savetxt("butane-fe.dat", dih_vs_A, header='"dih" "Free energy"')
+    # write results to pickle file
+    pickle.dump( raw_result, open("raw_result.pickle", "wb") )
 
     return result["free_energy"]
 
