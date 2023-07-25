@@ -22,7 +22,7 @@ from pysages.colvars import DihedralAngle
 from pysages.methods import ANN
 
 # %%
-kT = 0.596161
+kT = 0.596161 # kcal/mol
 dt = 0.02045
 
 
@@ -284,7 +284,6 @@ def main(argv=[]):
 
     mesh = result["mesh"]
     A = result["free_energy"]
-    A = A.max() - A
 
     fig, ax = plt.subplots()
 
