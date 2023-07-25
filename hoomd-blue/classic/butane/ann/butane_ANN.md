@@ -368,7 +368,7 @@ Make sure to run with GPU support, otherwise, it can take a very long time.
 <!-- #endregion -->
 
 ```python colab={"base_uri": "https://localhost:8080/"} id="K951m4BbpUar" outputId="f01ca7e3-69f4-4218-9eb5-cdc022f877b8"
-run_result = pysages.run(method, generate_context, int(5e5))
+raw_result = pysages.run(method, generate_context, int(5e5))
 ```
 
 <!-- #region id="PXBKUfK0p9T2" -->
@@ -382,7 +382,7 @@ import matplotlib.pyplot as plt
 ```
 
 ```python id="6W7Xf0ilqAcm"
-result = pysages.analyze(run_result)
+result = pysages.analyze(raw_result)
 
 mesh = result["mesh"]
 A = result["free_energy"]
