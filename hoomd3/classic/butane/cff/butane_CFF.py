@@ -14,8 +14,10 @@ from math import pi, sqrt
 import gsd
 import gsd.hoomd
 import hoomd
+import matplotlib.pyplot as plt
 import hoomd.md
 import numpy as np
+import dill as pickle
 
 import pysages
 from pysages import Grid
@@ -290,11 +292,26 @@ def main(argv=[]):
 
     timesteps = args.time_steps
     tic = time.perf_counter()
-    run_result = pysages.run(method, generate_context, timesteps)
+    raw_result = pysages.run(method, generate_context, timesteps)
     toc = time.perf_counter()
     print(f"Completed the simulation in {toc - tic:0.4f} seconds.")
 
-    result = pysages.analyze(run_result)
+    result = pysages.analyze(raw_result)
+
+    mesh = result["mesh"]
+    A = result["free_energy"]
+
+    fig, ax = plt.subplots()
+
+    ax.set_xlabel(r"Dihedral Angle, $\xi$")
+    ax.set_ylabel(r"$A(\xi)$")
+
+    ax.plot(mesh, A)
+    plt.gca()
+    fig.savefig("butane-fe.png")
+
+    # write simulation to pickle file
+    pickle.dump( raw_result, open("raw_result.pickle", "wb") )
     return result["free_energy"]
 
 
