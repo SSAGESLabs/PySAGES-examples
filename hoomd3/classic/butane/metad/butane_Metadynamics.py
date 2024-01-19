@@ -15,14 +15,16 @@ from math import pi, sqrt
 import gsd
 import gsd.hoomd
 import hoomd
+import matplotlib.pyplot as plt
 import hoomd.md
 import numpy as np
+import dill as pickle
 
 import pysages
 from pysages import Grid
 from pysages.colvars import DihedralAngle
 from pysages.methods import MetaDLogger, Metadynamics
-
+from pysages.approxfun import compute_mesh
 # %%
 kB = 8.314462618e-3
 kT = 0.596161
@@ -305,11 +307,38 @@ def main(argv=[]):
     callback = MetaDLogger(hills_file, stride) if args.log else None
 
     tic = time.perf_counter()
-    pysages.run(method, generate_context, timesteps, callback)
+    raw_result = pysages.run(method, generate_context, timesteps, callback)
     toc = time.perf_counter()
     print(f"Completed the simulation in {toc - tic:0.4f} seconds.")
 
-    return method
+    result = pysages.analyze(raw_result)
+
+    plot_grid = Grid(lower=(-pi,), upper=(pi,), shape=(128,), periodic=True)
+    xi = (compute_mesh(plot_grid) + 1) / 2 * plot_grid.size + plot_grid.lower
+    metapotential = result["metapotential"]
+    alpha = (
+        1
+        if deltaT is None
+        else (kT + deltaT) / deltaT
+    )
+
+    # report in kT and set min free energy to zero
+    A = metapotential(xi) * -alpha / kT
+    A = A - A.min()
+    A = A.reshape(plot_grid.shape)
+
+    fig, ax = plt.subplots()
+
+    ax.set_xlabel(r"Dihedral Angle, $\xi$")
+    ax.set_ylabel(r"$A(\xi)$")
+
+    ax.plot(xi, A)
+    plt.gca()
+    fig.savefig("butane-fe.png")
+
+    # write simulation to pickle file
+    pickle.dump( raw_result, open("raw_result.pickle", "wb") )
+    return result
 
 
 # %%
