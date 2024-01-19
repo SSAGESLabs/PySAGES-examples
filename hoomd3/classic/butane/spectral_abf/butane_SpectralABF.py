@@ -17,6 +17,7 @@ import hoomd
 import hoomd.md
 import matplotlib.pyplot as plt
 import numpy as np
+import dill as pickle
 
 import pysages
 from pysages import Grid
@@ -288,12 +289,12 @@ def main(argv=[]):
 
     timesteps = args.time_steps
     tic = time.perf_counter()
-    run_result = pysages.run(method, generate_context, timesteps)
+    raw_result = pysages.run(method, generate_context, timesteps)
     toc = time.perf_counter()
     print(f"Completed the simulation in {toc - tic:0.4f} seconds.")
 
     # extract free energy from result
-    result = pysages.analyze(run_result)
+    result = pysages.analyze(raw_result)
     mesh = result["mesh"]
     fes_fn = result["fes_fn"]
     A = fes_fn(mesh)
@@ -309,9 +310,8 @@ def main(argv=[]):
     plt.gca()
     fig.savefig("butane-fe.png")
 
-    # write free energy to file
-    dih_vs_A = np.stack([mesh[:, 0], A[:, 0]], axis=1)
-    np.savetxt("butane-fe.dat", dih_vs_A, header='"dih", "Free energy"')
+    # write simulation to pickle file
+    pickle.dump( raw_result, open("raw_result.pickle", "wb") )
 
     return result["free_energy"]
 
