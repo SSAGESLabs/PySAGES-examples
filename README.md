@@ -82,7 +82,7 @@ such as starting coordinates.
 | alanine dp | unbiased     | 2 x dihedral angle | [script.py](./openmm/classic/alaninedipeptide/unbiased/adp_unbiased.py) | --- |
 
 *ANN*  = Artificial Neural Network sampling; 
-*FUNN* = adpative Force-biasing sampling Using Neural Networks, or FUNN-ABF;
+*FUNN* = adaptive Force-biasing sampling Using Neural Networks, or FUNN-ABF;
 *CFF*  = Combined Force-Frequency sampling;
 *SpectralABF* = Spectral Adaptive Biasing Force. 
 
