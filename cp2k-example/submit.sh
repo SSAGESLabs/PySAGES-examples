@@ -16,4 +16,4 @@ export ASE_CP2K_COMMAND="mpirun -np 64 $CONDA_PREFIX/bin/cp2k_shell.psmp"
 
 ulimit -s unlimited
 
-python sim.py
+python sim_pysages_cp2k.py
